@@ -48,7 +48,7 @@ export default {
         },
         methods:{
             updateRecord(){
-                axios.post("http://localhost/laravel/myproject/tasks/"+this.rec.id,{
+                axios.post("http://localhost/ToDo/tasks/"+this.rec.id,{
                     'title':this.rec.title,
                     'description':this.rec.description,
                     'status':this.rec.status,

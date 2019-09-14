@@ -42,7 +42,7 @@ export default {
         },
         methods:{
             addRecord(){
-                axios.post("http://localhost/laravel/myproject/tasks",{
+                axios.post("http://localhost/ToDo/tasks",{
                     'title':this.title,
                     'description':this.description,
                 })

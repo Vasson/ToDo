@@ -1908,7 +1908,7 @@ __webpack_require__.r(__webpack_exports__);
     getRecord: function getRecord(id) {
       var _this = this;
 
-      axios.get('http://localhost/laravel/myproject/tasks/' + id + '/edit').then(function (response) {
+      axios.get('http://localhost/ToDo/tasks/' + id + '/edit').then(function (response) {
         return _this.editRec = response.data;
       })["catch"](function (error) {
         return _this.response.errors;
@@ -1920,7 +1920,7 @@ __webpack_require__.r(__webpack_exports__);
       var reply = confirm("Are you sure you want to delete record?");
 
       if (reply) {
-        axios.post('http://localhost/laravel/myproject/tasks/' + id, {
+        axios.post('http://localhost/ToDo/tasks/' + id, {
           id: id,
           _method: 'DELETE'
         }).then(function (response) {
@@ -1936,7 +1936,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this3 = this;
 
-    axios.get('http://localhost/laravel/myproject/tasks').then(function (response) {
+    axios.get('http://localhost/ToDo/tasks').then(function (response) {
       return _this3.tasks = response.data;
     })["catch"](function (error) {
       return console.log(error);
@@ -2001,7 +2001,7 @@ __webpack_require__.r(__webpack_exports__);
     addRecord: function addRecord() {
       var _this = this;
 
-      axios.post("http://localhost/laravel/myproject/tasks", {
+      axios.post("http://localhost/ToDo/tasks", {
         'title': this.title,
         'description': this.description
       }).then(function (data) {
@@ -2080,7 +2080,7 @@ __webpack_require__.r(__webpack_exports__);
     updateRecord: function updateRecord() {
       var _this = this;
 
-      axios.post("http://localhost/laravel/myproject/tasks/" + this.rec.id, {
+      axios.post("http://localhost/ToDo/tasks/" + this.rec.id, {
         'title': this.rec.title,
         'description': this.rec.description,
         'status': this.rec.status,
@@ -53581,8 +53581,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\wamp\www\laravel\myproject\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\wamp\www\laravel\myproject\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\wamp\www\ToDo\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\wamp\www\ToDo\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

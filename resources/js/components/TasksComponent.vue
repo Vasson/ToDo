@@ -35,14 +35,14 @@ export default {
                 this.tasks = data.data
             },
             getRecord(id){
-                axios.get('http://localhost/laravel/myproject/tasks/'+id+'/edit')
+                axios.get('http://localhost/ToDo/tasks/'+id+'/edit')
                 .then(response => this.editRec = response.data)
                 .catch(error => this.response.errors)
             },
             deleteRecord(id){
                 const reply = confirm("Are you sure you want to delete record?");
                 if(reply){
-                    axios.post('http://localhost/laravel/myproject/tasks/'+id,{
+                    axios.post('http://localhost/ToDo/tasks/'+id,{
                      id:id,
                      _method:'DELETE'
                     })
@@ -55,7 +55,7 @@ export default {
             }
         },
         mounted() {
-            axios.get('http://localhost/laravel/myproject/tasks')
+            axios.get('http://localhost/ToDo/tasks')
             .then((response) => this.tasks = response.data)
             .catch((error) => console.log(error));
             console.log('Task Component mounted.')
